@@ -10,18 +10,12 @@ function Navbar() {
       <div>
         <Link href="/">
           <Links>HOME</Links>
-        </Link>
-
-        <Link href="/work">
-          <Links>WORK</Links>
-        </Link>
-
+        </Link>{" "}
         <Link href="/about">
           <Links>ABOUT</Links>
         </Link>
-
-        <Link href="/contact">
-          <Links>CONTANT</Links>
+        <Link href="/work">
+          <Links>WORK</Links>
         </Link>
       </div>
     </Nav>
@@ -30,22 +24,34 @@ function Navbar() {
 
 export default Navbar;
 const Nav = styled.nav`
-  margin: 0;
-  padding: 0;
+  
+  margin: 0px;
+  padding: 25px;
   height: 50px;
   overflow: hidden;
   background-color: #0e0310;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 750px) {
+  div {
+    display:none;
+    
+  }
+}
 `;
 const Links = styled.a`
   position: relative;
+  margin: 15px;
   color: white;
   cursor: pointer;
   text-align: center;
   padding: 50px 16px;
   text-decoration: none;
+  &:last-child{
+    margin-right: 100px;
+  }
 
   ::after {
     content: "";
@@ -70,6 +76,6 @@ const Links = styled.a`
   }
 `;
 const Logo = styled.h4`
-  padding: 0px 10px;
+  padding: 0px 100px;
   color: #fff;
 `;
