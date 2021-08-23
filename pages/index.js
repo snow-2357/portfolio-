@@ -25,6 +25,7 @@ position: relative;
 padding: 30px 20%;
 font-size: 100%;
 color: white;
+z-index: 1;
 
 img{
   height: 80%;

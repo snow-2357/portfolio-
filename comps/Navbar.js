@@ -37,8 +37,29 @@ const Nav = styled.nav`
   @media screen and (max-width: 750px) {
   div {
     display:none;
+  
+  }
+  ::after{
+    content: "";
+    position: relative;
+    right: 10vh;
+    height: 5px;
+    width: 15px;
+    background-color: white;
+    transform: scaleX(1);
+      opacity: 1
     
   }
+  &:hover {
+    position: relative;
+    
+    div{
+     
+      
+      
+    }
+  }
+
 }
 `;
 const Links = styled.a`
@@ -76,6 +97,6 @@ const Links = styled.a`
   }
 `;
 const Logo = styled.h4`
-  padding: 0px 100px;
+  padding: 0px 10%;
   color: #fff;
 `;
